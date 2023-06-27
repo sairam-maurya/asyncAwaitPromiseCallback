@@ -31,49 +31,49 @@ let order = (time, work) => {
 
 order(2000, () => console.log(`${stocks.fruits[0]}was selected`))
 
-.then(()=>{
-    return order(0000,()=>console.log("production has started"))
-})
+    .then(() => {
+        return order(0000, () => console.log("production has started"))
+    })
 
-.then(()=>{
-    return order(2000,()=>console.log("the fruit was chopped"))
-})
+    .then(() => {
+        return order(2000, () => console.log("the fruit was chopped"))
+    })
 
-.then(()=>{
-    return order(1000, () => console.log(`${stocks.liquid[0]} and${stocks.liquid[1]} was selected `))
+    .then(() => {
+        return order(1000, () => console.log(`${stocks.liquid[0]} and${stocks.liquid[1]} was selected `))
 
-})
+    })
 
- .then(() => {
+    .then(() => {
         return order(1000, () => console.log("start the machine"))
     })
 
 
-.then(() => {
+    .then(() => {
         return order(1000, () => console.log("the fruit was chopped"))
     })
 
 
- .then(() => {
+    .then(() => {
         return order(1000, () => console.log(`${stocks.holder[0]}  was selected `))
 
- })  
- 
- 
- .then(() => {
+    })
+
+
+    .then(() => {
         return order(3000, () => console.log(`${stocks.toppings[0]}  was selected `))
 
-    }) 
+    })
 
 
- .then(() => {
+    .then(() => {
         return order(1000, () => console.log("serve teh icecream  "))
     })
 
-    .catch(()=>{
+    .catch(() => {
         console.log("customer left")
     })
 
-    .finally(()=>{
+    .finally(() => {
         console.log("day ended,shop closed")
     })
